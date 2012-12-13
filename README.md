@@ -1,15 +1,21 @@
-SpringJDBCExampleSimpleStandaloneForCF
-======================================
+JDBCHibernateJpaCF
+==================
 
-This app is intended to be a cloudfoundry standalone app based upon http://www.mkyong.com/spring/maven-spring-jdbc-example/ 
- 
-1. It currently runs successfully from STS as a simple java app, updating and reading a local mysql db.
-2. It currently deploys successfully (from the command line using vmc) to cloudfoundry with the same functionality, but in this case,
-it creates the database as well.
+This app started out as a cloudfoundry standalone app based upon 
 
-On Cloud Foundry, the app runs "standalone", which means that there are no web components. The app is deployed as a "jar", rather than a "war".
-Logging is used to monitor app results rather than using a web interface. The app is invoked from a shell script that is built from a shell script 
-assembler. Currently on Cloud Foundry, manual Service configuration must be used, so the xml file must differentiate between "local" deployment 
+http://www.mkyong.com/spring/maven-spring-jdbc-example/ 
+
+It's evolving into a hibernate app example, but isn't quite there yet.
+
+The intention is to deploy and run standalone on CF with no web components.
+
+On Cloud Foundry, the app runs "standalone", which means that there are no 
+web components. The app is deployed as a "jar", rather than a "war".
+Logging is used to monitor app results rather than using a web interface. 
+
+The app is invoked from a shell script that is built from a shell script 
+assembler. Currently on Cloud Foundry, manual Service configuration must 
+be used, so the xml file must differentiate between "local" deployment 
 versus cloud deployment.
 
 This standalone app relies on appassembler for invocation (see doc below). 
